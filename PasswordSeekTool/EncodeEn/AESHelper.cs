@@ -88,5 +88,33 @@ namespace PasswordSeekTool
 
             return Encoding.UTF8.GetString(plainText);
         }
+
+        /// <summary>
+        /// AES解密
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="iv"></param>
+        /// <returns></returns>
+        public static string AESDecrypt(byte[] text, byte[] key, byte[] iv)
+        {
+            RijndaelManaged rijndaelCipher = new RijndaelManaged();
+            rijndaelCipher.Mode = CipherMode.CBC;
+            rijndaelCipher.Padding = PaddingMode.PKCS7;
+            rijndaelCipher.KeySize = 128;
+            rijndaelCipher.BlockSize = 128;
+            byte[] encryptedData = text;
+            byte[] pwdBytes = key;
+            byte[] keyBytes = new byte[16];
+            int len = pwdBytes.Length;
+            if (len > keyBytes.Length) len = keyBytes.Length;
+            System.Array.Copy(pwdBytes, keyBytes, len);
+            rijndaelCipher.Key = keyBytes;
+            byte[] ivBytes = iv;
+            rijndaelCipher.IV = ivBytes;
+            ICryptoTransform transform = rijndaelCipher.CreateDecryptor();
+            byte[] plainText = transform.TransformFinalBlock(encryptedData, 0, encryptedData.Length);
+
+            return Encoding.UTF8.GetString(plainText);
+        }
     }
 }

@@ -650,5 +650,12 @@ namespace PasswordSeekTool
                 return obj.GetHashCode();
             }
         }
+
+        private void btnJavaRSA_Click(object sender, EventArgs e)
+        {
+            string[] array = RSAHelper.GenerateKeys();
+            string java_pub = RSAKeyConvert.RSAPublicKeyDotNet2Java(array[1]);
+            string java_pri = RSAKeyConvert.RSAPrivateKeyDotNet2Java(array[0]);
+        }
     }
 }

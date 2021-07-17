@@ -87,6 +87,8 @@
             this.chkSmall = new System.Windows.Forms.CheckBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label21 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnJavaRSA = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -95,6 +97,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -112,6 +115,7 @@
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Location = new System.Drawing.Point(22, 20);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -673,7 +677,7 @@
             this.trackBar1.Location = new System.Drawing.Point(124, 448);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(448, 42);
+            this.trackBar1.Size = new System.Drawing.Size(448, 45);
             this.trackBar1.TabIndex = 7;
             this.trackBar1.Value = 50;
             // 
@@ -685,6 +689,27 @@
             this.label21.Size = new System.Drawing.Size(89, 12);
             this.label21.TabIndex = 8;
             this.label21.Text = "最小算法热度：";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnJavaRSA);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(503, 320);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = " 测试功能 ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnJavaRSA
+            // 
+            this.btnJavaRSA.Location = new System.Drawing.Point(31, 27);
+            this.btnJavaRSA.Name = "btnJavaRSA";
+            this.btnJavaRSA.Size = new System.Drawing.Size(75, 23);
+            this.btnJavaRSA.TabIndex = 0;
+            this.btnJavaRSA.Text = "JavaRSA";
+            this.btnJavaRSA.UseVisualStyleBackColor = true;
+            this.btnJavaRSA.Click += new System.EventHandler(this.btnJavaRSA_Click);
             // 
             // MainFrm
             // 
@@ -719,6 +744,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,6 +810,8 @@
         private System.Windows.Forms.CheckBox chkSmall;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btnJavaRSA;
     }
 }
 
